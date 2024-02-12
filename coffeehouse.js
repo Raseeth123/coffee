@@ -160,10 +160,11 @@ const removeitem=(id,b)=>{
 buybutton.onclick=()=>{
  if( dollarprice.innerHTML!=='0.00'){
   cartcontainer.classList.remove("active")
+  window.alert("Your order has been placed successfully")
   const jsConfetti = new JSConfetti();
     //button.addEventListener('click', () => {
         jsConfetti.addConfetti({
-            emojis: ['🎉', '⚡️', '💥', '✨'],
+            emojis: [],
           confettiRadius: 6,
           emojiSize: 50,
           confettiNumber: 120,

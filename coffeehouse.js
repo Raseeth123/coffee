@@ -159,6 +159,7 @@ const removeitem=(id,b)=>{
 
 buybutton.onclick=()=>{
  if( dollarprice.innerHTML!=='0.00'){
+  cartcontainer.classList.remove("active")
   const jsConfetti = new JSConfetti();
     //button.addEventListener('click', () => {
         jsConfetti.addConfetti({
@@ -174,7 +175,7 @@ buybutton.onclick=()=>{
       text: `Your score is ${score} / ${question1.length}`,
       icon: "success"
     });
-    window.alert("🎉 Your Order Has Been Successfully Placed 🎉")
+
  }
  else{
   window.alert("Add item to Cart")

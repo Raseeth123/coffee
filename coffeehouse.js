@@ -159,7 +159,22 @@ const removeitem=(id,b)=>{
 
 buybutton.onclick=()=>{
  if( dollarprice.innerHTML!=='0.00'){
-  window.alert("🎉 Your Order Has Been Successfully Placed 🎉")
+  const jsConfetti = new JSConfetti();
+    //button.addEventListener('click', () => {
+        jsConfetti.addConfetti({
+            emojis: ['🎉', '⚡️', '💥', '✨'],
+          confettiRadius: 6,
+          emojiSize: 50,
+          confettiNumber: 120,
+        }).then(() => jsConfetti.addConfetti())
+    // })
+    Swal.fire({
+      title: "Good job!",
+      width: 300,
+      text: `Your score is ${score} / ${question1.length}`,
+      icon: "success"
+    });
+    window.alert("🎉 Your Order Has Been Successfully Placed 🎉")
  }
  else{
   window.alert("Add item to Cart")
